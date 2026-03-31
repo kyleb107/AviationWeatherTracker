@@ -33,6 +33,6 @@ public class Main {
         }
 
         scanner.close();
-        System.out.println("Goodbye.");
+        System.out.println("Goodbye. Thank you for using our program!");
     }
 }
