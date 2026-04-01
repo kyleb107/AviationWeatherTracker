@@ -6,7 +6,7 @@ import org.json.JSONObject;
 public class MetarParser {
 
     public MetarData parse(JSONObject json) {
-        String stationId = json.optString("icaoId", "UNKNOWN");
+        String airportId = json.optString("icaoId", "UNKNOWN");
         String rawOb = json.optString("rawOb", "");
         String observationTime = json.optString("reportTime", "");
         int windDir = json.optInt("wdir", 0);
@@ -17,6 +17,6 @@ public class MetarParser {
 
         String flightCategory = json.optString("fltCat", "UNKNOWN");
 
-        return new MetarData(stationId, rawOb, observationTime, windDir, windSpeed, altimeter, flightCategory);
+        return new MetarData(airportId, rawOb, observationTime, windDir, windSpeed, altimeter, flightCategory);
     }
 }
